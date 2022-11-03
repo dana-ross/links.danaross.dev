@@ -19,7 +19,7 @@ jobs:
       - name: Deploy WWW
         uses: easingthemes/ssh-deploy@v3.0.1
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rltgoDvOi -zz --exclude '.git' --exclude '.github'"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
